@@ -55,6 +55,8 @@
           display inline-block
         .desc
           vertical-align :top
+          overflow: hidden
+          text-overflow: ellipsis
           display inline-block
           width :200px
           height :90px
@@ -69,6 +71,8 @@
 
 
       .gongao-wrapper
+        overflow :hidden
+        text-overflow :ellipsis
         margin-bottom 0px
         width 100%
         height 30px

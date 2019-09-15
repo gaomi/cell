@@ -17,8 +17,6 @@
 
 <script>
 
-  var ERR_OK=0;
-
     export default {
         name: "goods",
       props: {
@@ -35,9 +33,8 @@
       this.$https.get('http://localhost:8080/api/seller')
         .then(response => {
           console.log(response.data);
-          if(response.data.errno === ERR_OK) {
+          if(response.data.errno === _const.ERR_OK) {
             this.goodsData = response.data.data;
-            console.log(this.goodsData);
           }
         })
     }
@@ -48,13 +45,7 @@
   .router-link-active{
     color: #0ff;
   }
-  .goods-body{
-    position: absolute;
-    top:40px;
-    bottom: 0px;
-    background: #999;
-    width: 100%;
-  }
+
   .goods{
     position: absolute;
     bottom: 60px;

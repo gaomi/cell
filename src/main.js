@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios';
+import cst from '../static/common/js/const.js';
 Vue.prototype.$https = axios;
 
 Vue.config.productionTip = false;
