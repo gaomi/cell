@@ -92,7 +92,7 @@ export default {
     }
   },
   mounted(){
-    this.$https.get('http://localhost:8080/api/seller')
+    this.$https.get('http://localhost:8091/api/seller')
       .then(response => {
         if(response.data) {
           this.msg = response.data;

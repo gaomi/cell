@@ -2,6 +2,7 @@
   <div>
     <Seller :sell="seller"></Seller>
     <Goods></Goods>
+    <v-Footer></v-Footer>
   </div>
 </template>
 
@@ -24,7 +25,7 @@ export default {
     Seller,"v-Footer":Footer,Goods
   },
   created(){
-    this.$https.get('http://localhost:8080/api/seller')
+    this.$https.get('http://localhost:8091/api/seller')
       .then(response => {
         console.log(response.data);
         if(response.data.errno === ERR_OK) {
